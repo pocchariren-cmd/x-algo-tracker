@@ -1,0 +1,101 @@
+[
+    {
+        "date": "2026/04/14",
+        "tag": "Algorithm v4",
+        "title": "Grok-Powered 完全トランスフォーマー移行",
+        "tech": "従来のレコメンデーション・システムを完全に廃止。Grok搭載のトランスフォーマーモデルが、投稿の文脈、動画の内容、ユーザー間親密度を多角的に解析。インプレッションの分配を『Engagement Velocity（瞬発力）』重視へ。",
+        "easy": "Xの頭脳が、最新AI『Grok』に完全に入れ替わったよ！投稿して最初の1時間の盛り上がりが、その後の伸びをすべて決める「瞬発力」勝負になったんだ。みんなと最初から全力で盛り上がることが大事だよ！",
+        "source": "X Engineering Blog / xAI Strategic Update",
+        "url": "https://blog.x.com/engineering"
+    },
+    {
+        "date": "2026/04/05",
+        "tag": "Premium",
+        "title": "購読者優先（Pay-to-Reach）モデルの強化",
+        "tech": "Premium/Premium+ユーザーへのインプレッション重み付けを最大強化。非Premiumユーザーの外部リンクを含む投稿は、最大90%の露出制限を適用。",
+        "easy": "Xは「課金ユーザー」が一番トクをする場所になったよ。外部リンクを貼るならPremium加入がほぼ必須！入ってない人は、リンクはリプライ欄に貼るなどの工夫が必要だよ。",
+        "source": "X Global Support / Policy Update",
+        "url": "https://help.x.com/en/rules-and-policies/x-rules"
+    },
+    {
+        "date": "2026/03/22",
+        "tag": "Grok v3",
+        "title": "『深い対話』と『リンク評価』の再定義",
+        "tech": "リプライに対する返信を『150倍』加点。100万トークンの文脈窓を持つGrok v3が文脈を完全に理解。Premiumユーザーの外部記事リンク（Substack/Medium/個人ブログ等）を優先表示する一方、非Premiumは大幅に抑制。",
+        "easy": "Grok v3が覚醒！ただの「いいね」より、おしゃべりが何往復も続く投稿がめちゃくちゃ広まるようになったよ（今までの150倍！）。あと、ブログ記事などのリンクは、課金ユーザーなら大チャンスだけど、未課金の人は今は貼らない方がいいかも！",
+        "source": "xAI Dev Notes / Elon Musk Official",
+        "url": "https://x.ai/blog/grok-3"
+    },
+    {
+        "date": "2026/03/15",
+        "tag": "Small Biz Boost",
+        "title": "中小アカウントへのレコメンド強化",
+        "tech": "大手アカウントへの偏りを是正する新ロジックを導入。独自視点を持つフォロワー1,000人以下のアカウントを『おすすめ』タブへ積極的にキュレーションする重み付けを実施。",
+        "easy": "フォロワーが少なくても大逆転のチャンス！AIが「面白い視点」を持ってる人を、フォロワー数に関係なくみんなにおすすめしてくれるようになったよ。今が一番伸ばしやすい時期だね！",
+        "source": "X Engineering / ML Team Update",
+        "url": "https://github.com/twitter/the-algorithm"
+    },
+    {
+        "date": "2026/03/10",
+        "tag": "New Trend",
+        "title": "『会話の継続性』重視のランキング調整",
+        "tech": "リプライ欄でのユーザー間の対話時間が長く続く投稿に対し、アルゴリズムが『有益な議論』と判断し。スコアを加算するアップデートが確認されました。",
+        "easy": "一方的な投稿より、みんなと楽しくおしゃべりが続いてる投稿がもっと広まるようになったよ！コメント欄でみんなと盛り上がると、AIが『これいいじゃん！』って広めてくれるよ。",
+        "source": "X Engineering Blog / xAI Research Notes",
+        "url": "https://blog.x.com/engineering"
+    },
+    {
+        "date": "2026/01/20",
+        "tag": "Major Update",
+        "title": "xAI搭載の新しいアルゴリズム（Grok）へ移行",
+        "tech": "従来のルールベースのランキングを廃止し、Grokのトランスフォーマー・アーキテクチャに基づいたAI駆動型システムへ刷新されました。",
+        "easy": "XのAI가これまで以上に賢くなったよ！きみの好みを『魔法』みたいに当ててくれるようになったんだ。これからは、AIが面白いと思うような投稿をするのが一番のコツだよ。",
+        "source": "Elon Musk Official Post / xAI Announcement",
+        "url": "https://x.com/elonmusk"
+    },
+    {
+        "date": "2025/10/12",
+        "tag": "Boost",
+        "title": "外部リンクのペナルティが完全撤廃",
+        "tech": "これまで外部リンクを含む投稿はインプレッションが最大50%減少していましたが、この制限が解除され、外部サイトへの誘導も公平に評価されるようになりました。",
+        "easy": "YouTubeのリンクとかを貼っても、表示されにくくならなくなったよ！好きなものを自由にリンクして、たくさんの人に広められるようになったんだ。思いっきりシェアOK！",
+        "source": "X Help Center Update / Algorithm Open Source Repo",
+        "url": "https://github.com/twitter/the-algorithm"
+    },
+    {
+        "date": "2024/09/25",
+        "tag": "Trust",
+        "title": "コミュニティノートの影響力が強化",
+        "tech": "コミュニティノートが付与された投稿は、おすすめタブへの表示が制限され（60-80%減）、アカウント自体の信頼スコアも低下するようになりました。",
+        "easy": "間違いを言うと、AIから厳しいお仕置きを受けるよ。正しいことを書くのが、みんなに届ける一番の近道なんだ。",
+        "source": "Community Notes Guide / Visibility Filtering Policy",
+        "url": "https://help.x.com/en/using-x/community-notes"
+    },
+    {
+        "date": "2024/06/15",
+        "tag": "Reach",
+        "title": "縦型動画へのリーチブーストが大幅拡大",
+        "tech": "15〜60秒の縦型動画（9:16）について、テキスト投稿の2〜4倍の重み付けがされ、おすすめ（For You）タブでの露出が優先されます。",
+        "easy": "縦長の動画（1分くらいのもの）は、ふつうの4倍も広まりやすくなったよ！動画を作るのが、いま最強の方法だよ。",
+        "source": "X Business Blog / Vertical Video Creator Guide",
+        "url": "https://business.x.com/"
+    },
+    {
+        "date": "2024/03/10",
+        "tag": "Update",
+        "title": "『会話の質』に基づくリプライの並び替え",
+        "tech": "元ツイートの投稿者との親密度や、リプライ内でのやり取りの多さに応じて、有益な返信を最上部に固定する機能が強化されました。",
+        "easy": "「面白い返信」や「みんなでおしゃべりしてる場所」が上に表示されやすくなったよ。会話が盛り上がることを書こう！",
+        "source": "Algorithm Technical Analysis / Engineering Repo",
+        "url": "https://github.com/twitter/the-algorithm"
+    },
+    {
+        "date": "2023/12/05",
+        "tag": "Policy",
+        "title": "フォロー解除（リムーブ）のペナルティ導入",
+        "tech": "短期間に大量のフォロー・解除を繰り返すアカウントに対し、信頼スコア（Trust Score）の大幅な減点が適用されるようになりました。",
+        "easy": "一気にたくさんの人をフォローしたり外したりすると、AIから怪しまれるよ。地道に仲良くなるのが一番！",
+        "source": "X Rules & Policies / Anti-Spam Measures",
+        "url": "https://help.x.com/en/rules-and-policies/x-rules"
+    }
+]

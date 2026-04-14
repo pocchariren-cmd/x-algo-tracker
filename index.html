@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="X(旧Twitter)の公式アルゴリズムを徹底解析。あなたのアカウントのアルゴ指数を測定し、30日間の成長ロードマップを提案するコンサルティングツール。">
+    <meta name="keywords" content="X, アルゴリズム, 攻略, 運用, インプレッション, コンサル, 解析">
+    <!-- OGP -->
+    <meta property="og:title" content="X Algorithm Tracker | アルゴ指数解析">
+    <meta property="og:description" content="AIがあなたのアカウントを徹底サポート。爆速で成長するための戦略ガイド。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/your-repo/path/to/preview.png">
+    <!-- URLが決まったら差し替え可能 -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav>
+        <div class="logo">𝕏 Algorithm Tracker</div>
+        <div class="status-badge" id="last-update">最新の状態</div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>𝕏 アルゴ指数解析</h1>
+            <p class="subtitle">公式アルゴリズムに基づいたアカウントの徹底評価</p>
+        </header>
+
+        <!-- アカウント診断ツール -->
+        <section id="diagnosis-tool" class="glass-card">
+            <div class="analyzer-header">
+                <div class="health-status hidden" id="health-status">
+                    <span class="pulse"></span> 状態：<span id="health-label">健全</span>
+                </div>
+                <h2>🔍 アカウント・スコア解析</h2>
+                <p>Xの最新アルゴリズム（Grok v3）に基づいた200以上のパラメータ解析</p>
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="account-url" placeholder="https://x.com/username">
+                <button id="diagnose-btn">解析開始</button>
+            </div>
+
+            <div id="scanning-status" class="hidden">
+                <div class="scan-line"></div>
+                <p id="scan-log">サーバーに接続中...</p>
+                <div class="progress-bar">
+                    <div class="progress-inner"></div>
+                </div>
+            </div>
+
+            <div id="diagnosis-result" class="hidden">
+                <div class="results-top-row">
+                    <div class="chart-container">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="main-stats">
+                        <div class="main-score-box">
+                            <h3>総合アルゴ指数</h3>
+                            <div class="score-display">
+                                <span id="score-num">0</span><small>pts</small>
+                            </div>
+                        </div>
+                        <div class="golden-time-box">
+                            <h3>ゴールデンタイム</h3>
+                            <div class="time-value" id="golden-time">--:--</div>
+                            <p>最もAIに推奨される投稿時間</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scan-findings" id="scan-findings">
+                    <!-- JSで詳細なスキャン結果を生成 -->
+                </div>
+
+                <div class="sub-scores-grid">
+                    <div class="score-item">
+                        <div class="item-label"><span>リーチ力 (Reach)</span><span id="val-reach">--</span></div>
+                        <div class="mini-bar">
+                            <div id="bar-reach" class="mini-inner"></div>
+                        </div>
+                        <p class="metric-desc">フォロワー外へコンテンツを届ける拡散力。初期インプレッションの広がりを示します。</p>
+                        <p class="metric-advice" id="advice-reach"></p>
+                    </div>
+                    <div class="score-item">
+                        <div class="item-label"><span>信頼性 (Trust)</span><span id="val-trust">--</span></div>
+                        <div class="mini-bar">
+                            <div id="bar-trust" class="mini-inner"></div>
+                        </div>
+                        <p class="metric-desc">AIからの信頼度。スパム判定への耐性やアカウントの健全性を表します。</p>
+                        <p class="metric-advice" id="advice-trust"></p>
+                    </div>
+                    <div class="score-item">
+                        <div class="item-label"><span>対話力 (Engagement)</span><span id="val-eng">--</span></div>
+                        <div class="mini-bar">
+                            <div id="bar-eng" class="mini-inner"></div>
+                        </div>
+                        <p class="metric-desc">フォロワーとの関係値。リプライや滯在時間など深い交流の指標です。</p>
+                        <p class="metric-advice" id="advice-eng"></p>
+                    </div>
+                    <div class="score-item">
+                        <div class="item-label"><span>メディア活用 (Media)</span><span id="val-media">--</span></div>
+                        <div class="mini-bar">
+                            <div id="bar-media" class="mini-inner"></div>
+                        </div>
+                        <p class="metric-desc">画像や動画の活用度。視覚の占有率とアルゴリズムの優遇度を示します。</p>
+                        <p class="metric-advice" id="advice-media"></p>
+                    </div>
+                    <div class="score-item">
+                        <div class="item-label"><span>独自性 (Originality)</span><span id="val-orig">--</span></div>
+                        <div class="mini-bar">
+                            <div id="bar-orig" class="mini-inner"></div>
+                        </div>
+                        <p class="metric-desc">他者との差別化度合い。一次情報の発信やAIの重複判定に関わります。</p>
+                        <p class="metric-advice" id="advice-orig"></p>
+                    </div>
+                </div>
+
+                <div class="analysis-advice">
+                    <h4>💡 AI分析レポート</h4>
+                    <p id="score-comment">解析結果に基づいてアドバイスを表示します。</p>
+                </div>
+
+                <div class="recommendations-grid">
+                    <div class="rec-card">
+                        <h4>🚀 具体的な改善プラン</h4>
+                        <ul id="improvement-plan"></ul>
+                    </div>
+                    <div class="rec-card">
+                        <h4>✍️ おすすめポスト案</h4>
+                        <div id="post-ideas" class="post-bubble"></div>
+                    </div>
+                </div>
+
+                <div class="roadmap-section">
+                    <h4>📅 30日間・成功ロードマップ</h4>
+                    <div class="roadmap-timeline" id="roadmap-container">
+                        <!-- JSで生成 -->
+                    </div>
+                </div>
+
+                <div class="share-section">
+                    <a id="share-x-btn" href="#" target="_blank" class="glass-btn share-x-btn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961H5.078z"></path></svg>
+                        結果を𝕏でシェアする
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="latest-report">
+            <h2 class="section-title">X最新アルゴ情報</h2>
+            <div id="report-container">
+                <div class="loading">解析中...</div>
+            </div>
+        </section>
+
+        <section class="action-section">
+            <button id="refresh-btn" class="glass-btn">最新情報をチェックする</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 X Algorithm Tracker - AI Powered Analysis</p>
+    </footer>
+
+    <template id="card-template">
+        <div class="report-card">
+            <div class="card-header">
+                <span class="date"></span>
+                <span class="tag"></span>
+            </div>
+            <div class="card-title-row">
+                <h2 class="title"></h2>
+                <div class="trend-badges">
+                    <span class="trend-badge reach-up">🚀 REACH UP</span>
+                    <span class="trend-badge penalty-down">⚠️ PENALTY DOWN</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="tech-side">
+                    <h3>🛠️ テクニカルな変更</h3>
+                    <p class="tech-desc"></p>
+                </div>
+                <div class="easy-side">
+                    <h3>💡 かんたん解説</h3>
+                    <p class="easy-desc"></p>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="source-link" target="_blank" rel="noopener">🔗 出典: <span
+                        class="source-text"></span></a>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
