@@ -1,6 +1,15 @@
 [
     {
         "date": "2026/04/14",
+        "tag": "Hot Topic",
+        "title": "Grok 3 Vision による『画像内テキスト』の読み取り強化",
+        "tech": "投稿画像に含まれる文字情報をGrok 3が直接解析し、検索インデックスに即時反映。テキスト投稿と内容の一致率が検索順位に影響。",
+        "easy": "画像の中の文字もAIが全部読んでるよ！画像と文章の内容がピッタリ合っていると、AIに『これは良い投稿だ！』って認められて、もっと広まりやすくなるよ。",
+        "source": "xAI Research Preview / Community Feedback",
+        "url": "https://x.ai/blog"
+    },
+    {
+        "date": "2026/04/14",
         "tag": "Algorithm v4",
         "title": "Grok-Powered 完全トランスフォーマー移行",
         "tech": "従来のレコメンデーション・システムを完全に廃止。Grok搭載のトランスフォーマーモデルが、投稿の文脈、動画の内容、ユーザー間親密度を多角的に解析。インプレッションの分配を『Engagement Velocity（瞬発力）』重視へ。",
