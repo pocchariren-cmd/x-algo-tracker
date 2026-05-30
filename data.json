@@ -1,5 +1,14 @@
 [
     {
+        "date": "2026/05/15",
+        "tag": "Major Update",
+        "title": "新モデル『Phoenix』移行とレガシー・ルールの廃止",
+        "tech": "手動設定された重み付けルールを完全廃止し、Grok由来のトランスフォーマーモデル『Phoenix』へ全面移行。ユーザーの行動履歴を言語モデルのようにシーケンシャルに処理し、滞在時間（Dwell Time）と最初の30分の初速（Engagement Velocity）を最重要指標として採用。",
+        "easy": "Xの心臓部が『Phoenix（フェニックス）』という超高性能AIに進化！これまでの『こうすれば伸びる』といった単純なルールが通用しなくなったよ。特に投稿して最初の30分でどれだけ深く読まれたか（滞在時間）が、その後に100万人に届くかどうかの鍵を握るよ！",
+        "source": "xAI Dev Blog / X Engineering Technical Report",
+        "url": "https://blog.x.com/engineering"
+    },
+    {
         "date": "2026/04/14",
         "tag": "Hot Topic",
         "title": "Grok 3 Vision による『画像内テキスト』の読み取り強化",
